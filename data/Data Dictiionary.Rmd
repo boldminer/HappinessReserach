@@ -1,0 +1,59 @@
+---
+title: "Untitled"
+author: "Guannan Liu"
+date: "11/6/2020"
+output: html_document
+---
+Appendix I: Data Dictionary
+
+
+Dependent Variable: Happiness score
+
+Happiness score or subjective well-being (variable name ladder): The survey measure of SWB is from the Dec 22, 2017 release of the Gallup World Poll (GWP), which covers the years from 2005 to 2017. Unless stated otherwise, it is the national average response to the question of life evaluations. The English wording of the question is “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?” This measure is also referred to as Cantril life ladder, or just life ladder in our analysis.
+
+Independent Variable:
+
+1.	Log GDP per capital/GDP per capital
+
+in purchasing power parity (PPP) at constant 2011 international dollar prices are from the September 15. 2017 update of the World Development Indicators (WDI). A few countries are missing the GDP numbers in the WDI release but were present in earlier releases. We use the numbers from the earlier release, after adjusting their levels by a factor of 1.17 to take into account changes in the implied prices when switching from the PPP 2005 prices used in the earlier release to the PPP 2011 prices used in the latest release. The factor of 1.17 is the average ratio derived by dividing the US GDP per capita under the 2011 prices with their counterparts under the 2005 prices. The same 1.17 is used to adjust the Taiwanese numbers, which are originally PPP dollars at 2005 constant prices and are based on the Penn World Table.
+
+2.	Social support	
+
+The national average of the binary responses (either 0 or 1) to the GWP question “If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?”
+
+3.	Life Expectancy
+
+The time series of healthy life expectancy at birth are calculated by the authors based on data from the World Health Organization (WHO), the World Development Indicators (WDI), and statistics published in journal articles.	
+	
+
+4.	Freedom to make life choices
+
+The national average of responses to the GWP question “Are you satisfied or dissatisfied with your freedom to choose what you do with your life?”
+
+5.	Generosity
+
+The residual of regressing national average of response to the GWP question “Have you donated money to a charity in the past month?” on GDP per capita.	
+
+6.	Perceptions of corruption
+
+The measure is the national average of the survey responses to two questions in the GWP: “Is corruption widespread throughout the government or not” and “Is corruption widespread within businesses or not?” The overall perception is just the average of the two 0-or-1 responses. In case the perception of government corruption is missing, we use the perception of business corruption as the overall perception. The corruption perception at the national level is just the average response of the overall perception at the individual level.	
+
+7.	Confidence in national government
+
+The national average of responses to the GWP question “Are you feeling confidence in your national government?”
+
+8.	Democratic Quality
+
+The national average of responses to the GWP question “Are you satisfied or dissatisfied with the democratic of local government?”
+
+9.	FDI
+
+Foreign direct investment (FDI) is an investment made by a firm or individual in one country into business interests located in another country. Generally, FDI takes place when an investor establishes foreign business operations or acquires foreign business assets, including establishing ownership or controlling interest in a foreign company
+	
+10.	Birth rate
+
+The birth rate (technically, births/population rate) is the total number of live births per 1,000 in a population in a year.
+
+11.	Population Density
+
+	Numbers of people per per-square kilometer

@@ -1,0 +1,12 @@
+---
+title: "What Matter to Happiness?"
+author: "Guannan Liu"
+date: "11/6/2020"
+output: html_document
+---
+
+Happiness is progressively being cited as a significant economic indicator in the news nowadays. Every country is aiming at improving their life quality and life satisfaction. Along with the raising awareness to life quality and life satisfaction, people pay great attention to the factor that impacts their happiness. Therefore, researchers began to find a way to compare each country’s happiness. The first step is to quantify people’s happiness. However, researchers are still studying what contributes to quantifying happiness. No one has an absolute answer for what is the most important factor in happiness yet. This report is going to give an overall understanding of what matters to happiness from a macro perspective. The objective is to solve the relationship between various factors and the happiness. It is interesting to discover why these factors are critical and how these factors might change people’s happiness as time goes on. The challenge of the research is to determine which factor will have real impact on happiness. Looking at some economic data as a starting point, it is possible to conclude that happiness would be affected by the government, the economic status and the demographical change. 
+
+This project is based on the survey from the Gallup World Poll and the World Bank. From 2015 to 2019, Gallup World Poll collected data and then the World Bank used it to conduct reports of happiness ranking. This project will focus on the year of 2019 
+
+This project test the dataset with two parts, continuous variables and indicator variable. These models generally suggest that the social support, GDP per capita and the life expectancy are top three important factors to happiness
