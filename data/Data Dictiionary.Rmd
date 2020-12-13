@@ -1,12 +1,9 @@
 ---
-title: "Untitled"
+title: "Data Dictionary"
 author: "Guannan Liu"
-date: "11/6/2020"
+date: "12/13/2020"
 output: html_document
 ---
-Appendix I: Data Dictionary
-
-
 Dependent Variable: Happiness score
 
 Happiness score or subjective well-being (variable name ladder): The survey measure of SWB is from the Dec 22, 2017 release of the Gallup World Poll (GWP), which covers the years from 2005 to 2017. Unless stated otherwise, it is the national average response to the question of life evaluations. The English wording of the question is “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?” This measure is also referred to as Cantril life ladder, or just life ladder in our analysis.

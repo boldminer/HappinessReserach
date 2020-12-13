@@ -1,0 +1,41 @@
+---
+title: "Algorithms"
+author: "Guannan Liu"
+date: "12/13/2020"
+output: html_document
+---
+This document will generally explain the model and algorithms used in this project. It will also include links to more resources. 
+
+Linear regression:
+
+In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables (also known as dependent and independent variables). The case of one explanatory variable is called simple linear regression; for more than one, the process is called multiple linear regression.
+
+In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. Such models are called linear models.
+
+Regression Tree or Decision Tree:
+
+Decision tree learning is one of the predictive modelling approaches used in statistics, data mining and machine learning. It uses a decision tree (as a predictive model) to go from observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves).  Decision trees are among the most popular machine learning algorithms given their intelligibility and simplicity.
+
+Initially, all records in the Training Set (pre-classified records that are used to determine the structure of the tree) are grouped into the same partition. The algorithm then begins allocating the data into the first two partitions or branches, using every possible binary split on every field. The algorithm selects the split that minimizes the sum of the squared deviations from the mean in the two separate partitions. This splitting rule is then applied to each of the new branches. This process continues until each node reaches a user-specified minimum node size and becomes a terminal node. (If the sum of squared deviations from the mean in a node is zero, then that node is considered a terminal node even if it has not reached the minimum size.)
+
+About Pruning the Tree: Since the tree is grown from the Training Set, a fully developed tree typically suffers from over-fitting (i.e., it is explaining random elements of the Training Set that are not likely to be features of the larger population). This over-fitting results in poor performance on real life data. Therefore, the tree must be pruned using the Validation Set. XLMiner calculates the cost complexity factor at each step during the growth of the tree and decides the number of decision nodes in the pruned tree. The cost complexity factor is the multiplicative factor that is applied to the size of the tree (measured by the number of terminal nodes).
+
+The tree is pruned to minimize the sum of: 1) the output variable variance in the validation data, taken one terminal node at a time; and 2) the product of the cost complexity factor and the number of terminal nodes. If the cost complexity factor is specified as zero, then pruning is simply finding the tree that performs best on validation data in terms of total terminal node variance. Larger values of the cost complexity factor result in smaller trees. Pruning is performed on a last-in first-out basis, meaning the last grown node is the first to be subject to elimination.
+
+Bagging or Bootstrap aggregating
+
+Bagging is a machine learning ensemble meta-algorithm designed to improve the stability and accuracy of machine learning algorithms used in statistical classification and regression. It also reduces variance and helps to avoid overfitting. Although it is usually applied to decision tree methods, it can be used with any type of method. Bagging is a special case of the model averaging approach. 
+
+A good illustration: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ensemble_Bagging.svg/1024px-Ensemble_Bagging.svg.png
+
+GBM(Generalized boosted regression): 
+
+Package: 
+https://cran.r-project.org/web/packages/gbm/gbm.pdf
+https://cran.r-project.org/web/packages/gbm/vignettes/gbm.pdf
+
+Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
+
+Boosting takes on various forms with different programs using different loss functions, different base models, and different optimization schemes.
+
+

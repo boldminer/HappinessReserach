@@ -1,7 +1,7 @@
 ---
 title: "Happiness"
 author: "Guannan Liu"
-date: "11/6/2020"
+date: "12/13/2020"
 output: html_document
 ---
 
@@ -44,6 +44,8 @@ dat2017 <- read.csv("../data/2017.csv")
 dat2018 <- read.csv("../data/2018.csv")
 ```{r}
 dir()
+getwd() #To locate the source folder. Please set the scouse folder at src/, then it could read data automatically
+
 dat2015<- read.csv("../data/2015.csv")
 dat2016 <- read.csv("../data/2016.csv")
 dat2017 <- read.csv("../data/2017.csv")
@@ -165,7 +167,6 @@ plot(yhat.prune.tree.5,dat.train$Score)
 abline(0,1) 
 MSE.prune.tree.5 = mean((dat.train$Score - yhat.prune.tree.5)^2)
 MSE.prune.tree.5
-#MSE.prune.tree.5 = 0.195074
 #the MSE to the test data set:
 yhat.tree.valid = predict(tree.train,dat.valid)
 MSE.prune.tree.5.valid = mean((dat.valid$Score - yhat.tree.valid)^2)
@@ -180,14 +181,6 @@ bag.happiness = randomForest(Score~., data = dat1, subset = train,
                              mtry = 11,importance = TRUE)
 bag.happiness
 importance(bag.happiness)
-#                             %IncMSE IncNodePurity
-#GDP.per.capita               20.9539698     30.989430
-#Social.support               13.7814449     20.783324
-#Healthy.life.expectancy      21.4888365     30.262989
-#Freedom.to.make.life.choices 10.8448485      5.517545
-#Generosity                   -0.5548402      2.958512
-#Perceptions.of.corruption     4.8664215      3.325306
-
 yhat.bag = predict(bag.happiness,dat.valid)
 MSE.bag.test = mean((dat.valid$Score - yhat.bag)^2)
 MSE.bag.test
@@ -303,7 +296,6 @@ yhat.prune.high.test <- predict(prune.high.train, dat.test2,type="class")
 tab.high.test<-table(dat.test2$high,yhat.prune.high.test,dnn=c("Actual","Predicted"))
 tab.high.test
 mean(dat.test2$high != yhat.prune.high.test)
-# The error rate is 15.38462%
 # The prune tree perform wrose on the test dataset in terms of the classification error. 
 
 

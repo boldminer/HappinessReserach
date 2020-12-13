@@ -35,6 +35,7 @@ package.check <- lapply(
 
 ####import data####
 dir()
+getwd() #To locate the source folder. Please set the scouse folder at src/, then it could read data automatically
 dat2015<- read.csv("../data/2015.csv")
 dat2016 <- read.csv("../data/2016.csv")
 dat2017 <- read.csv("../data/2017.csv")
@@ -233,7 +234,6 @@ summary(logregall.2)
 yhat.logregall.2<-predict(logregall,dat.test2,type="response")
 yhat.logregall.class.2<-ifelse(yhat.logregall.2>0.5,1,0)
 tab.logregall.2<-table(dat.test2$high,yhat.logregall.class.2,dnn=c("Actual","Predicted"))
-tab.logregall.2
 mean(dat.test2$high != yhat.logregall.class.2)
 #Error rate of 0.1153846, 11.5384%
 
@@ -259,7 +259,7 @@ yhat.prune.high.test <- predict(prune.high.train, dat.test2,type="class")
 tab.high.test<-table(dat.test2$high,yhat.prune.high.test,dnn=c("Actual","Predicted"))
 tab.high.test
 mean(dat.test2$high != yhat.prune.high.test)
-# The error rate is 15.38462%
+# The error rate is :
 # The prune tree perform wrose on the test dataset in terms of the classification error. 
 
 #Bagging
@@ -320,7 +320,6 @@ yhat.boost.class<-ifelse(yhat.boost.high>0.5,1,0)
 tab.boost<-table(dat.test2$high,yhat.boost.class, dnn=c("Actual","Predicted"))
 tab.boost
 mean(dat.test2$high != yhat.boost.class)
-# 20.00%
 
 ####END####
 
